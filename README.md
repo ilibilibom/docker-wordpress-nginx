@@ -127,6 +127,10 @@ To run wp cli commands run (replace YOUR_CLI_COMMAND with a real command - for e
  docker exec -u www-data mysite_phpfpm_1 wp YOUR_CLI_CMMAND 
  ```
  
+ ## Pull requests 
+ 
+ Most welcome !! 
+
 
 
 ## Built With
