@@ -1,3 +1,3 @@
 A Docker based wordpress/php development environment.
  
-This is a new repo - To be continued soon !! 
+This is a new repo, and not yet fully tested - To be continued soon !! 
