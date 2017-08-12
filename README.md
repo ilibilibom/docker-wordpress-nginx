@@ -17,7 +17,7 @@ Here are the steps need to get this Docker up and running:
 Clone the repo to a local folder on your machine: 
 
 ```
-git@github.com:ilibilibom/Docker-wordpress-ngnix-php-mysql-mailcaher.git
+git clone git@github.com:ilibilibom/Docker-wordpress-ngnix-php-mysql-wpcli-mailcaher.git
 ```
 
 Change the following variables to your own: 
@@ -113,6 +113,21 @@ Run
 ```
 docker-compose up -d 
 ```
+
+## Install Wordpress
+
+Your Wordpress install lives in the app folder. Remove the gitkeep file there, and start your wordpress installation. 
+
+## WP CLI 
+
+You can run Wp cli through docker. 
+To run wp cli commands run (replace YOUR_CLI_COMMAND with a real command - for example user list): 
+ 
+ ```
+ docker exec -u www-data mysite_phpfpm_1 wp YOUR_CLI_CMMAND 
+ ```
+ 
+
 
 ## Built With
 
