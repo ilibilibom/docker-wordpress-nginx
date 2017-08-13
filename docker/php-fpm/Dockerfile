@@ -1,5 +1,7 @@
 FROM php:7.1-fpm
 
+COPY docker-entrypoint.sh /usr/local/bin/docker-entrypoint.sh
+
 ARG INSTALL_XDEBUG=true
 ENV INSTALL_XDEBUG ${INSTALL_XDEBUG}
 RUN if [ ${INSTALL_XDEBUG} = true ]; then \
@@ -24,9 +26,9 @@ RUN curl https://getcomposer.org/download/1.2.0/composer.phar > /tmp/composer.ph
 
 CMD ["php-fpm"]
 
-COPY docker-entrypoint.sh /usr/local/bin/docker-entrypoint.sh
+#RUN chmod +x /usr/local/bin/docker-entrypoint.sh
 
-ENTRYPOINT ["docker-entrypoint.sh"]
+#ENTRYPOINT ["docker-entrypoint.sh"]
 
 USER www-data
 
