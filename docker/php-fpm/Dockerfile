@@ -24,4 +24,10 @@ RUN curl https://getcomposer.org/download/1.2.0/composer.phar > /tmp/composer.ph
 
 CMD ["php-fpm"]
 
+COPY docker-entrypoint.sh /usr/local/bin/docker-entrypoint.sh
+
+ENTRYPOINT ["docker-entrypoint.sh"]
+
+USER www-data
+
 EXPOSE 9000
