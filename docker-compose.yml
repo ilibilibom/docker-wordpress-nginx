@@ -1,17 +1,14 @@
 version: '2'
 services:
   mysql:
-    image: mysql:latest
-    restart: always
-    environment:
-      MYSQL_ROOT_PASSWORD: YOUR_ROOT_PASSWORD
-      MYSQL_DATABASE: YOUR_DB_NAME
-      MYSQL_USER: YOUR_DB_USER
-      MYSQL_PASSWORD: YOUR_DB_PASSWORD
-    ports:
-      - "3306:3306"
-    volumes:
-      - "./.data/mysql:/var/lib/mysql"
+      image: mariadb
+      environment:
+        MYSQL_ROOT_PASSWORD: YOUR_ROOT_PASSWORD
+        MYSQL_DATABASE: YOUR_DB_NAME
+        MYSQL_USER: YOUR_DB_USER
+        MYSQL_PASSWORD: YOUR_DB_PASSWORD
+      volumes:
+        - ./.data/mysql:/var/lib/mysql/data
   phpfpm:
     depends_on:
       - mysql
