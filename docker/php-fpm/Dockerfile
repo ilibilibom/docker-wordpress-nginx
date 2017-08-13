@@ -1,7 +1,5 @@
 FROM php:7.1-fpm
 
-COPY docker-entrypoint.sh /usr/local/bin/docker-entrypoint.sh
-
 ARG INSTALL_XDEBUG=true
 ENV INSTALL_XDEBUG ${INSTALL_XDEBUG}
 RUN if [ ${INSTALL_XDEBUG} = true ]; then \
@@ -9,6 +7,7 @@ RUN if [ ${INSTALL_XDEBUG} = true ]; then \
     docker-php-ext-enable xdebug \
 ;fi
 
+COPY php.ini /usr/local/etc/php/conf.d/uploads.ini
 RUN apt-get update && apt-get install -y libz-dev libmemcached-dev libjpeg-dev libpng-dev
 RUN docker-php-ext-install -j$(nproc) pdo pdo_mysql mysqli gd
 RUN docker-php-ext-enable pdo pdo_mysql mysqli gd
@@ -26,9 +25,11 @@ RUN curl https://getcomposer.org/download/1.2.0/composer.phar > /tmp/composer.ph
 
 CMD ["php-fpm"]
 
-#RUN chmod +x /usr/local/bin/docker-entrypoint.sh
+COPY docker-entrypoint.sh /usr/local/bin/docker-entrypoint.sh
 
-#ENTRYPOINT ["docker-entrypoint.sh"]
+RUN chmod +x /usr/local/bin/docker-entrypoint.sh
+
+RUN /usr/local/bin/docker-entrypoint.sh
 
 USER www-data
 
