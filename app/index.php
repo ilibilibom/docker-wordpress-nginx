@@ -1,2 +1,2 @@
 <?php
-echo 'Install your PHP aplication here !!';
+echo 'Yeh !! - Install your PHP aplication here';
