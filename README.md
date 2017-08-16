@@ -153,7 +153,7 @@ To run wp cli commands run (replace YOUR_PHPFRM_CONTAINER_NAME - you can find it
  
  You can also add this command to your alias so you can have a shorter version of the command
   
- Go to bash rc
+ Go to bash_profile file
   ```
    cd && sudo nano .bash_profile
  ```
