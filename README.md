@@ -151,13 +151,13 @@ To run wp cli commands run (replace YOUR_PHPFRM_CONTAINER_NAME - you can find it
   ```
  
  
- 
- You can also add this command to your alias so you can a shorter version of the command
-  Go to bash rc
+ You can also add this command to your alias so you can have a shorter version of the command
+  
+ Go to bash rc
   ```
    cd && sudo nano .bash_profile
  ```
- Add an alias to this file (for example): 
+ Add an alias 
    ```
 alias wp_docker='docker exec -u www-data wp8_phpfpm_1 wp'    
 
@@ -169,6 +169,7 @@ alias wp_docker='docker exec -u www-data wp8_phpfpm_1 wp'
  ```
 
  Now you can run wp_docker instead of the previous long command. 
+ 
  
  ## Pull requests 
  
