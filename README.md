@@ -121,10 +121,10 @@ Your Wordpress install lives in the app folder. Remove the gitkeep file there, a
 ## WP CLI 
 
 You can run Wp cli through docker. 
-To run wp cli commands run (replace YOUR_CLI_COMMAND with a real command - for example user list): 
+To run wp cli commands run (replace MY_PHPFRM_CONTAINER_NAME - you can find it by running docker ps) and ( YOUR_CLI_COMMAND ) with a real command - for example user list): 
  
  ```
- docker exec -u www-data mysite_phpfpm_1 wp YOUR_CLI_CMMAND 
+ docker exec -u www-data MY_PHPFRM_CONTAINER_NAME wp YOUR_CLI_CMMAND 
  ```
  
  ## Pull requests 
