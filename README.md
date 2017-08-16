@@ -124,18 +124,32 @@ Run
 docker-compose up -d 
 ```
 
+Now go to your local doamin (or your docker ip - if you didn't add a doamin to your host file) - you should see the following message: 
+
+```
+Yeh !! - Install your PHP aplication here
+```
+
+
 ## Install Wordpress
 
-Your Wordpress install lives in the app folder. Remove the gitkeep file there, and start your wordpress installation. 
+Your Wordpress install lives in the ` app ` folder. 
+This is where you start your wordpress installation. 
 
 ## WP CLI 
 
 You can run Wp cli through docker. 
-To run wp cli commands run (replace YOUR_PHPFRM_CONTAINER_NAME - you can find it by running docker ps) and ( YOUR_CLI_COMMAND ) with a real command - for example user list): 
+To run wp cli commands run (replace YOUR_PHPFRM_CONTAINER_NAME - you can find it by running docker ps) and ( YOUR_CLI_COMMAND ) with a real command - for example core download): 
  
  ```
  docker exec -u www-data YOUR_PHPFRM_CONTAINER_NAME wp YOUR_CLI_CMMAND 
  ```
+
+ for example 
+  ```
+  docker exec -u www-data YOUR_PHPFRM_CONTAINER_NAME wp core download 
+  ```
+ 
  
  
  You can also add this command to your alias so you can a shorter version of the command
