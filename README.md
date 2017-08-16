@@ -22,7 +22,7 @@ You will need Docker installed on your local machine.
 
 ### Installing
 
-Here are the steps need to get this Docker up and running:
+Here are the steps need to get this project up and running:
 
 Clone the repo to a local folder on your machine: 
 
