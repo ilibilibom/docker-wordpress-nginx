@@ -2,6 +2,16 @@
 
 This is a starter development environment to get you up and running with your Wordpress development project 
 
+
+This Docker install contains the following features: 
+ 1) Ngnix 
+ 2) PHPfrm
+ 3) Mysql (Maria DB)
+ 4) Composer
+ 5) WP cli 
+ 6) Mailcacher   
+ 7) Xdebug 
+
 ## Getting Started
 
 Clone this repo into a folder on your local machine 
@@ -121,11 +131,30 @@ Your Wordpress install lives in the app folder. Remove the gitkeep file there, a
 ## WP CLI 
 
 You can run Wp cli through docker. 
-To run wp cli commands run (replace MY_PHPFRM_CONTAINER_NAME - you can find it by running docker ps) and ( YOUR_CLI_COMMAND ) with a real command - for example user list): 
+To run wp cli commands run (replace YOUR_PHPFRM_CONTAINER_NAME - you can find it by running docker ps) and ( YOUR_CLI_COMMAND ) with a real command - for example user list): 
  
  ```
- docker exec -u www-data MY_PHPFRM_CONTAINER_NAME wp YOUR_CLI_CMMAND 
+ docker exec -u www-data YOUR_PHPFRM_CONTAINER_NAME wp YOUR_CLI_CMMAND 
  ```
+ 
+ 
+ You can also add this command to your alias so you can a shorter version of the command
+  Go to bash rc
+  ```
+   cd && sudo nano .bash_profile
+ ```
+ Add an alias to this file (for example): 
+   ```
+alias wp_docker='docker exec -u www-data wp8_phpfpm_1 wp'    
+
+  ```
+ Exit file and refresh your terminal 
+ 
+ ```
+ source ~/.bash_profile
+ ```
+
+ Now you can run wp_docker instead of the previous long command. 
  
  ## Pull requests 
  
