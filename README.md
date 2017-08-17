@@ -12,9 +12,6 @@ This Docker install contains the following features:
  6) Mailcacher   
  7) Xdebug 
 
-## Getting Started
-
-Clone this repo into a folder on your local machine 
 
 ### Prerequisites
 
@@ -170,6 +167,11 @@ alias wp_docker='docker exec -u www-data wp8_phpfpm_1 wp'
 
  Now you can run wp_docker instead of the previous long command. 
  
+ 
+  ## Mail Cacher 
+  
+  Mail Cacher should be running on http://YOUR_DOMAIN:1080 
+  
  
  ## Pull requests 
  
