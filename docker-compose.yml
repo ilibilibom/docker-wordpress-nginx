@@ -23,7 +23,7 @@ services:
       - mailcatcher
     restart: always
     extra_hosts:
-      - "jfrog.loc:YOUR_DOCKER_IP" # Use the gateway address for your docker network for the ip address. This is so that PHP FPM can find nginx for the postback to do things like cron jobs with WordPress
+      - "YOUR_DOMAIN:YOUR_DOCKER_IP" # Use the gateway address for your docker network for the ip address. This is so that PHP FPM can find nginx for the postback to do things like cron jobs with WordPress
   nginx:
     depends_on:
       - phpfpm
