@@ -25,11 +25,11 @@ RUN curl https://getcomposer.org/download/1.2.0/composer.phar > /tmp/composer.ph
 
 CMD ["php-fpm"]
 
-COPY docker-entrypoint.sh /usr/local/bin/docker-entrypoint.sh
+COPY docker-php-entrypoint.sh /usr/local/bin/docker-php-entrypoint.sh
 
-RUN chmod +x /usr/local/bin/docker-entrypoint.sh
+RUN chmod +x /usr/local/bin/docker-php-entrypoint.sh
 
-RUN /usr/local/bin/docker-entrypoint.sh
+RUN /usr/local/bin/docker-php-entrypoint.sh
 
 USER www-data
 
