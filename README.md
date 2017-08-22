@@ -11,6 +11,7 @@ This Docker install contains the following features:
  5) WP cli 
  6) Mailcacher   
  7) Xdebug 
+ 8) self generated SSL certificate (Only for development)
 
 
 ### Prerequisites
@@ -33,11 +34,16 @@ Change the following variables to your own:
 
 ```
 server {
-  server_name server_name YOUR_SERVER_NAME;
-  listen 80 default_server;
+  listen 443 ssl;
+  listen 80 ;
+
+  server_name YOUR_DOMAIN;
+
+  ssl_certificate      /etc/certs/nginx.crt;
+  ssl_certificate_key  /etc/certs/nginx.key;
 
   root   /var/www/html;
-  index  index.php index.html;
+  index  index.php;
 
   access_log /dev/stdout;
   error_log /dev/stdout info;
@@ -52,6 +58,8 @@ server {
     fastcgi_index index.php;
     fastcgi_param SCRIPT_FILENAME $document_root$fastcgi_script_name;
   }
+
+  sendfile off;
 }
 ```
 
