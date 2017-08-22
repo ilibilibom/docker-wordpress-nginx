@@ -30,7 +30,7 @@ git clone git@github.com:ilibilibom/Docker-wordpress-ngnix-php-mysql-wpcli-mailc
 
 Change the following variables to your own: 
 
-1) in nginx/default.conf - change YOUR_SERVER_NAME to your server name (after adding a local domain to to your local host file). 
+1) in nginx/default.conf - change YOUR_DOMAIN to your server name (after adding a local domain to to your local host file). 
 
 ```
 server {
@@ -100,7 +100,7 @@ services:
       - mailcatcher
     restart: always
     extra_hosts:
-      - "jfrog.loc:YOUR_DOCKER_IP" # Use the gateway address for your docker network for the ip address. This is so that PHP FPM can find nginx for the postback to do things like cron jobs with WordPress
+      - "YOUR_DOMAIN:YOUR_DOCKER_IP" # Use the gateway address for your docker network for the ip address. This is so that PHP FPM can find nginx for the postback to do things like cron jobs with WordPress
   nginx:
     depends_on:
       - phpfpm
