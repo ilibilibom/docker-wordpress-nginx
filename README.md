@@ -70,7 +70,6 @@ In docker-compose.yml file change:
 4) YOUR_DB_PASSWORD
 5) YOUR_DOCKER_IP
 
-
 ```
 version: '2'
 services:
@@ -120,6 +119,9 @@ services:
           - 1080:1080
 
 ```
+
+IMPORTANT - YOUR_DB_NAME, YOUR_DB_USER, YOUR_DB_PASSWORD are the values you add to your wp-config.php file 
+ALSO - DB_HOST in your wp-config.php file should be - "mysql"
 
 ## Run Docker 
 
