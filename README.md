@@ -134,7 +134,7 @@ docker-compose build
 docker-compose up -d 
 ```
 
-Now go to your local doamin (or your docker ip - if you didn't add a doamin to your host file) - you should see the following message: 
+Now go to your local domain (or your docker ip - if you didn't add a doamin to your host file) - you should see the following message: 
 
 ```
 Yeh !! - Install your PHP aplication here
