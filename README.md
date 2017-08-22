@@ -8,10 +8,10 @@ This Docker install contains the following features:
  2) PHPfpm
  3) Mysql (Maria DB)
  4) Composer
- 5) WP cli 
+ 5) WP CLI
  6) Mailcacher   
  7) Xdebug 
- 8) self generated SSL certificate (Only for development)
+ 8) Self generated SSL certificate (Only for development)
 
 
 ### Prerequisites
