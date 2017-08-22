@@ -129,6 +129,8 @@ ALSO - DB_HOST in your wp-config.php file should be - "mysql"
 Run
 
 ```
+docker-compose build
+
 docker-compose up -d 
 ```
 
