@@ -121,6 +121,7 @@ services:
 ```
 
 IMPORTANT - YOUR_DB_NAME, YOUR_DB_USER, YOUR_DB_PASSWORD are the values you add to your wp-config.php file 
+ 
 ALSO - DB_HOST in your wp-config.php file should be - "mysql"
 
 ## Run Docker 
