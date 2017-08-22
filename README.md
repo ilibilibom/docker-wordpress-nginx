@@ -5,7 +5,7 @@ This is a starter development environment to get you up and running with your Wo
 
 This Docker install contains the following features: 
  1) Ngnix 
- 2) PHPfrm
+ 2) PHPfpm
  3) Mysql (Maria DB)
  4) Composer
  5) WP cli 
