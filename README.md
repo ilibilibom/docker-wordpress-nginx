@@ -149,15 +149,15 @@ This is where you start your wordpress installation.
 ## WP CLI 
 
 You can run Wp cli through docker. 
-To run wp cli commands run (replace YOUR_PHPFRM_CONTAINER_NAME - you can find it by running docker ps) and ( YOUR_CLI_COMMAND ) with a real command - for example core download): 
+To run wp cli commands run (replace YOUR_PHPFPM_CONTAINER_NAME - you can find it by running docker ps) and ( YOUR_CLI_COMMAND ) with a real command - for example core download): 
  
  ```
- docker exec -u www-data YOUR_PHPFRM_CONTAINER_NAME wp YOUR_CLI_CMMAND 
+ docker exec -u www-data YOUR_PHPFPM_CONTAINER_NAME wp YOUR_CLI_CMMAND 
  ```
 
  for example 
   ```
-  docker exec -u www-data YOUR_PHPFRM_CONTAINER_NAME wp core download 
+  docker exec -u www-data YOUR_PHPFPM_CONTAINER_NAME wp core download 
   ```
  
  
@@ -169,7 +169,7 @@ To run wp cli commands run (replace YOUR_PHPFRM_CONTAINER_NAME - you can find it
  ```
  Add an alias 
    ```
-alias wp_docker='docker exec -u www-data wp8_phpfpm_1 wp'    
+alias wp_docker='docker exec -u www-data YOUR_PHPFPM_CONTAINER_NAME wp'    
 
   ```
  Exit file and refresh your terminal 
