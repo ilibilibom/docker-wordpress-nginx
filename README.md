@@ -105,6 +105,7 @@ services:
       - phpfpm
     ports:
       - "80:80"
+      - "443:443"
     image: nginx:latest
     volumes:
       - "./app:/var/www/html"
